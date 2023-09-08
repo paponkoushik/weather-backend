@@ -17,9 +17,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->job(new getAndStoreWeatherData(new WeatherService))->everyMinute();
-//        $schedule->job(new getAndStoreWeatherData(new WeatherService()))->everyFiveMinutes();
-        // $schedule->command('inspire')->hourly();
+        $schedule->job(new getAndStoreWeatherData(new WeatherService()))->everyFiveMinutes();
     }
 
     /**
